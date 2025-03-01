@@ -427,7 +427,19 @@
 /*================== Delicious ================*/
 
 .delicious {
+    position: relative;
     padding-bottom: 100px;
+}
+
+.delicious::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 45px;
+    width: 1058px;
+    height: 676px;
+    background-image: url(../img/background.png);
+    background-repeat: no-repeat;
 }
 
 .delicious__block {
@@ -465,9 +477,11 @@
 }
 
 .delicious__block-right {
+    position: relative;
     display: flex;
     align-items: center;
     max-width: 457px;
+    z-index: 5;
 }
 
 .delicious__block-video {
